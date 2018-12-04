@@ -18,6 +18,9 @@ function get_list (req, res){
 
 function add_to_list(req, res){
     adress_list.push(req.body);
+    res.json({
+        ok:"True"
+    });
 }
 
 server.get("/adress-book", get_list);
